@@ -28,11 +28,12 @@ The Premier League AGM takes place at the close of each season, at which time th
 
 On the previous post, we have analyzed the data about premier league stats. There are 2 dataset from the source, `stats.csv` and `results.csv`. What we have here is `results.csv`, and we will continue our analysis on the previous post, but we will also add a visualization, to make it more easy to interpretation.
 
-**The main goal we have here is, to know :**
-**- What the top 10 club with the most home or away goal**
-**- Further analysis of Manchester United**
-**- Further analysis on Chelsea and Manchester City (on the previous post)** 
-**- Team that are eligible to play in Champions League**
+**The main goal we have here is, to know :**    
+
+- **What the top 10 club with the most home or away goal**    
+- **Further analysis of Manchester United**   
+- **Further analysis on Chelsea and Manchester City (on the previous post)**     
+- **Team that are eligible to play in Champions League**    
 
 # Data Preprocessing
 
@@ -66,11 +67,13 @@ The data we have, there are :
 5. result = The Match Result, **D = Draw, H = Home Team win, A = Away Team win**
 6. season = Season of the Match
 
-🟥**IMPORTANT NOTE :**🟥
-**HOW TO READ RESULT COLUMNS : **  
-**IF THE RESULT IS "D", THAT MEANS THE MATCH IS DRAW* **   
-**IF THE RESULT IS "A", THAT MEANS AWAY TEAM WIN THE MATCH **       
-**IF THE RESULT IS "W", THAT MEANS HOME TEAM WIN THE MATCH  **      
+🟥**IMPORTANT NOTE :**🟥    
+
+**HOW TO READ RESULT COLUMNS : **       
+
+- IF THE RESULT IS **"D", = DRAW **   
+- IF THE RESULT IS **"A", = AWAY TEAM WIN THE MATCH **       
+- IF THE RESULT IS **"W", = HOME TEAM WIN THE MATCH  **      
 
 ## Data Cleansing
 
@@ -426,11 +429,11 @@ ggplot(data = cmc_agg, mapping = aes(x = Var1, y = value, fill = Result))+
 
 For another exploration, as the previous post, we say that each team have to be the top 5 to qualified to Champions League. Let's see who will be get in season 2017-2018!
 
-Before that, we have to know Premier League Standings point rules :
-- Three points are awarded for a win, 
-- 0ne point for a draw and 
-- None for a defeat
-- The team with the most points at the end of the season winning the Premier League title.
+Before that, we have to know Premier League Standings point rules :   
+- Three points are awarded for a win     
+- One point for a draw and    
+- None for a defeat   
+- The team with the most points at the end of the season winning the Premier League title      
 
 So, we will make a simple standings based on our data, our data contains result match over 12 season. Let's just take 2017-2018 for our analysis.
 
@@ -466,7 +469,7 @@ clas_h
 clas_a
 ```
 
-We have standings, but it's not the final. It's just standings for Home and Away team. We have 2 dataframes now, the we have to join them!
+We have standings, but it's not the final. It's just standings for Home and Away team. We have 2 dataframes now, then we have to join them!
 
 ```{r}
 
@@ -510,13 +513,19 @@ ggplot(data = stands, aes(x = total_points, y = reorder(team , total_points))) +
   - Tottenham Hotspur
   - Liverpool
   - Chelsea
-- Congrats!
+
+Congrats!
 
 
 # Conclusion
 
 Based on analysis above, we find that :
 
-- Manchester United has the most win over 12 season, because **they have a good performance** (Goal per season and Match result)
+- Manchester United has the most win over 12 season, because **they have a good performance** (Goal per season and Match result).
 - As the previous post, it's interesting that both Chelsea and Manchester United has a very slight average difference goal, only 0.58, but Chelsea has 20 more win than Manchester City. The reason is, because **Manchester City has more loss than Chelsea** both as Home or Away Team.
 - Looks like the top 5 team is strong enough, especially Manchester City! The rest of the team have to struggle more to beat the top 5 team, for win the Premier League title and qualified for Champions League!
+
+# Reference
+- [Dataset](https://www.kaggle.com/datasets/zaeemnalla/premier-league?select=results.csv)   
+- [About Premier League](https://www.premierleague.com/about)   
+- [Premier League Stats](https://www.premierleague.com/stats/top/clubs/wins?se=418)   
