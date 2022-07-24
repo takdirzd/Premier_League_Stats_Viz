@@ -18,7 +18,7 @@ source : https://www.kaggle.com/datasets/zaeemnalla/premier-league?select=stats.
 ## Dependencies
 - scales
 - dplyr
-- ggplot2)
+- ggplot2
 - tidyr
 - R
 - R Markdown
