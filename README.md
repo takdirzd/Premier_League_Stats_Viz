@@ -1,5 +1,5 @@
-# Premier League Stats Analysis
-<img src="E:\DATA\.ALGORITMA\..2) DATA VISUALIZATION CLASS\LBB DATA VISUALIZATION\dataset-cover.jpg">
+# Premier League Stats Visualization
+<img src="https://storage.googleapis.com/kaggle-datasets-images/36492/55620/c59bb5dc871a245f7fbf9afa8fab5a75/dataset-cover.jpg?t=2018-07-15-09-56-44">
 
 ## Introduction
 Project ini dikembangkan sebagai salah satu LBB (Learn By Building) dari Algoritma Academy Data Visualization Specialization. Hasil yang diharapkan adalah dapat membuat report/laporan hasil analisis Premier League Stats dalam bentuk html.
